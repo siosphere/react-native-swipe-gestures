@@ -37,7 +37,9 @@ class GestureRecognizer extends Component {
       onStartShouldSetPanResponder: shouldSetResponder,
       onMoveShouldSetPanResponder: shouldSetResponder,
       onPanResponderRelease: responderEnd,
-      onPanResponderTerminate: responderEnd
+      onPanResponderTerminate: responderEnd,
+      onPanResponderTerminationRequest: () => false,
+      onStartShouldSetPanResponderCapture: () => true
     });
   }
 
